@@ -1,0 +1,7 @@
+name: tracking_checks
+channels:
+    - conda-forge
+dependencies:
+    - python
+    - jupyter
+    - pandas
