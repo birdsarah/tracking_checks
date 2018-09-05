@@ -15,6 +15,7 @@ setuptools.setup(
 
     install_requires=[
         'pandas>=0.23',
+        'requests',
     ],
 
     classifiers=[
