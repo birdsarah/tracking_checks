@@ -9,7 +9,7 @@ def save_disconnect_json(file_path='disconnect.json'):
     Accepts optional file_path for where the json should be stored. Default is
     'disconnect.json' in current directory.
     """
-    url = 'https://services.disconnect.me/disconnect.json'
+    url = 'https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/master/services.json'
     response = requests.get(url)
     assert response.ok, f'Could not get disconnect.json: {response.status_code} , {response.reason}'
     with open(file_path, 'w') as f:
