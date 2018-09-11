@@ -57,6 +57,12 @@ def get_local_storage_for_profile(profile_dir):
     return df
 
 
+def get_places_table_for_profile(profile_dir):
+    db = get_db(profile_dir, 'places')
+    df = pd.read_sql('SELECT * FROM moz_places', db, index_col='id')
+    return df
+
+
 def get_db(profile_dir, db_name):
     assert db_name in DBS
     db_file = os.path.join(profile_dir, f'{db_name}.sqlite')
